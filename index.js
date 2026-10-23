@@ -72,7 +72,7 @@
   initialViewParameters, 
   {
     minFov: 0.1, // 限制能拉近的極限（數值越小越近）
-    maxFov: 5.5  // 限制能拉遠的極限（數值越大越遠）
+    maxFov: 1.5  // 限制能拉遠的極限（數值越大越遠）
   }
 );
   // Create scenes.
