@@ -71,8 +71,8 @@
   var view = new Marzipano.RectilinearView(
   initialViewParameters, 
   {
-    minFov: 0.2, // 限制能拉近的極限（數值越小越近）
-    maxFov: 2.5  // 限制能拉遠的極限（數值越大越遠）
+    minFov: 0.1, // 限制能拉近的極限（數值越小越近）
+    maxFov: 5.5  // 限制能拉遠的極限（數值越大越遠）
   }
 );
   // Create scenes.
@@ -88,8 +88,8 @@
     // 建立檢視限制參數
 var viewLimit = Marzipano.RectilinearView.limit.traditional(
   // 參數依序為：maxFov (拉最遠), minFov (拉最近), maxPitch, minPitch 等
-  Math.PI / 2, // maxFov (可嘗試放大或縮小這個數值，單位是弳度 radians)
-  Math.PI / 4  // minFov
+  Math.PI / 1, // maxFov (可嘗試放大或縮小這個數值，單位是弳度 radians)
+  Math.PI / 10  // minFov
 );
 
     var scene = viewer.createScene({
