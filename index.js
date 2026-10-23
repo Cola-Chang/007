@@ -68,8 +68,13 @@
   };
 
   // Initialize viewer.
-  var viewer = new Marzipano.Viewer(panoElement, viewerOpts);
-
+  var view = new Marzipano.RectilinearView(
+  initialViewParameters, 
+  {
+    minFov: 0.2, // 限制能拉近的極限（數值越小越近）
+    maxFov: 2.5  // 限制能拉遠的極限（數值越大越遠）
+  }
+);
   // Create scenes.
   var scenes = data.scenes.map(function(data) {
     var urlPrefix = "tiles";
